@@ -10,6 +10,8 @@
 		0EEE04C02935FA4A00BAF824 /* _4HANEMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE04BF2935FA4A00BAF824 /* _4HANEMobileApp.swift */; };
 		0EEE04C22935FA4A00BAF824 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE04C12935FA4A00BAF824 /* ContentView.swift */; };
 		0EEE04C72935FA4D00BAF824 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE04C62935FA4D00BAF824 /* Preview Assets.xcassets */; };
+		0EF8E482298A4973004A51F7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8E481298A4973004A51F7 /* CardView.swift */; };
+		0EF8E486298A4997004A51F7 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8E485298A4997004A51F7 /* ProgressCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,8 @@
 		0EEE04BF2935FA4A00BAF824 /* _4HANEMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4HANEMobileApp.swift; sourceTree = "<group>"; };
 		0EEE04C12935FA4A00BAF824 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0EEE04C62935FA4D00BAF824 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0EF8E481298A4973004A51F7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0EF8E485298A4997004A51F7 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,9 @@
 				0EE69ECF293C8DFD00189663 /* -4HANEMobile-Info.plist */,
 				0EEE04BF2935FA4A00BAF824 /* _4HANEMobileApp.swift */,
 				0EEE04C12935FA4A00BAF824 /* ContentView.swift */,
+				0EF8E480298A4954004A51F7 /* Model */,
+				0EF8E47F298A4945004A51F7 /* ViewModel */,
+				0EF8E47E298A4941004A51F7 /* View */,
 				0EEE04C52935FA4D00BAF824 /* Preview Content */,
 			);
 			path = 24HANEMobile;
@@ -77,6 +84,29 @@
 				0EEE04C62935FA4D00BAF824 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0EF8E47E298A4941004A51F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EF8E481298A4973004A51F7 /* CardView.swift */,
+				0EF8E485298A4997004A51F7 /* ProgressCircleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0EF8E47F298A4945004A51F7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0EF8E480298A4954004A51F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EEE04C22935FA4A00BAF824 /* ContentView.swift in Sources */,
+				0EF8E486298A4997004A51F7 /* ProgressCircleView.swift in Sources */,
+				0EF8E482298A4973004A51F7 /* CardView.swift in Sources */,
 				0EEE04C02935FA4A00BAF824 /* _4HANEMobileApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
