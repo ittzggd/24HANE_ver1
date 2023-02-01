@@ -186,6 +186,7 @@
 			children = (
 				0EE69ECF293C8DFD00189663 /* -4HANEMobile-Info.plist */,
 				0EEE04BF2935FA4A00BAF824 /* _4HANEMobileApp.swift */,
+				0EEE04C12935FA4A00BAF824 /* ContentView.swift */,
 				0E837EA52944EB7C001BA20C /* LaunchScreen */,
 				0EEE04EC29385AE400BAF824 /* Utils */,
 				0EC3426429385E3200935E97 /* Date */,
@@ -221,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				0E53CE4029449F7B0098C471 /* SideMenu */,
-				0EEE04C12935FA4A00BAF824 /* ContentView.swift */,
 				0EE69ECD293C7DB900189663 /* isLoading.swift */,
 				0EEE04E12936016400BAF824 /* HeaderView.swift */,
 				0EBE93B82942199E001EB518 /* MainView.swift */,
