@@ -10,9 +10,6 @@ import SwiftUI
 
 @main
 struct _4HANEMobileApp: App {
-    
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
