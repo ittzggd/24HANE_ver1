@@ -2,7 +2,7 @@
 //  JSONs.swift
 //  24HANEMobile
 //
-//  Created by Yunki on 2023/02/02.
+//  Created by Katherine JANG on 2/2/23.
 //
 
 import Foundation
@@ -12,14 +12,16 @@ struct mainInfo: Codable{
     let profileImage: String
     let isAdmin: Bool
     let inoutState: String
+    let tagAt: String
     
-    init(login: String, profileImage: String, isAdmin: Bool, inoutState: String){
+    init(login: String, profileImage: String, isAdmin: Bool, inoutState: String, tagAt: String){
         self.login = login
         self.profileImage = profileImage
         self.isAdmin = isAdmin
         self.inoutState = inoutState
+        self.tagAt = tagAt
     }
-    static let sample = mainInfo.init(login: "", profileImage: "", isAdmin: false, inoutState: "")
+    static let sample = mainInfo.init(login: "", profileImage: "", isAdmin: false, inoutState: "", tagAt: "")
 }
 
 struct perMonth: Codable {
@@ -36,9 +38,9 @@ struct perMonth: Codable {
 }
 
 struct inOutStamp: Codable{
-    let inTimeStamp: Int64?
-    let outTimeStamp: Int64?
-    let durationSecond: Int64?
+    let inTimeStamp: Int64
+    let outTimeStamp: Int64
+    let durationSecond: Int64
     
     init(inTimeStamp: Int64, outTimeStamp: Int64, durationSecond: Int64){
         self.inTimeStamp = inTimeStamp

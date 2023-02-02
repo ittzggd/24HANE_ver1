@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E68D215298B84BB0073326F /* JSONs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68D214298B84BB0073326F /* JSONs.swift */; };
+		0E68D217298B84EF0073326F /* 24HANE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68D216298B84EF0073326F /* 24HANE.swift */; };
 		0EED0C00298B1A2300BBDE23 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED0BFF298B1A2300BBDE23 /* ColorExtension.swift */; };
 		0EED0C02298B419F00BBDE23 /* PickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED0C01298B419F00BBDE23 /* PickerExtension.swift */; };
 		0EEE04C02935FA4A00BAF824 /* _4HANEMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE04BF2935FA4A00BAF824 /* _4HANEMobileApp.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E68D214298B84BB0073326F /* JSONs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONs.swift; sourceTree = "<group>"; };
+		0E68D216298B84EF0073326F /* 24HANE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 24HANE.swift; path = 24HANEMobile/Model/24HANE.swift; sourceTree = SOURCE_ROOT; };
 		0EE69ECF293C8DFD00189663 /* -4HANEMobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-4HANEMobile-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0EED0BFF298B1A2300BBDE23 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		0EED0C01298B419F00BBDE23 /* PickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerExtension.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		0EF8E47F298A4945004A51F7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0E68D216298B84EF0073326F /* 24HANE.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 		0EF8E480298A4954004A51F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E68D214298B84BB0073326F /* JSONs.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,9 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EEE04C22935FA4A00BAF824 /* ContentView.swift in Sources */,
+				0E68D217298B84EF0073326F /* 24HANE.swift in Sources */,
 				0EF8E486298A4997004A51F7 /* ProgressCircleView.swift in Sources */,
 				0EF8E482298A4973004A51F7 /* CardView.swift in Sources */,
 				0EED0C02298B419F00BBDE23 /* PickerExtension.swift in Sources */,
+				0E68D215298B84BB0073326F /* JSONs.swift in Sources */,
 				0EEE04C02935FA4A00BAF824 /* _4HANEMobileApp.swift in Sources */,
 				0EED0C00298B1A2300BBDE23 /* ColorExtension.swift in Sources */,
 			);
