@@ -33,5 +33,5 @@ class Hane: ObservableObject {
         self.calendar = []
     }
     
-    userInfo?.callAPI()
+    //userInfo?.callAPI()
 }
