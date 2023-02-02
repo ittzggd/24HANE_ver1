@@ -7,34 +7,49 @@
 
 import SwiftUI
 
+func timeToString(time: Int64) -> String {
+    let hours = time / 3600
+    let min = time % 3600 / 60
+    let accumulationTime = "\(hours) : \(min) "
+    return accumulationTime
+}
+
+func getProgress(current: Int64, goal: Int) -> Double {
+    var progress : Double
+    progress = (Double(current) / 3600) / Double(goal)
+    if progress >= 1 {
+        progress = 1
+    }
+    return progress
+}
 
 
 struct CardView: View {
     @Environment(\.colorScheme) var colorScheme
     
+    var times: Int64
     var options: Array<Int>
     @State var selectedOption = 0
     
    
     var body: some View {
-        ZStack(alignment: .center){
-            GeometryReader{ geo in
+            ZStack(alignment: .center){
                 RoundedRectangle(cornerRadius: 20)
-                    .frame(width: geo.size.width, height: geo.size.height / 3.5 )
                     .foregroundColor(colorScheme == .light ? .cardBackground : .white)
-                HStack{
-                    VStack(alignment: .center){
-                        Text("누적시간         ")
+                HStack(alignment: .center) {
+                    VStack(alignment: .center, spacing: 0){
+                        Text("누적시간")
                             .font(.system(size: 17, weight: .regular, design: .rounded))
                             .foregroundColor(.black)
-                            .padding(2)
-                        Text("2 H 20 M   ")
+                            .padding(.top, 3)
+                        Text("\(timeToString(time: times))")
                             .font(.system(size: 30, weight: .medium, design: .default))
                             .fixedSize(horizontal: true, vertical: false)
-                            .padding(.bottom)
-                        Text("목표시간        ")
+                            .padding()
+                        Text("목표시간")
                             .font(.system(size: 17, weight: .regular, design: .rounded))
                             .foregroundColor(.black)
+                            .padding(.top, 4)
                         HStack{
                             Menu{
                                 Picker(selection: $selectedOption){
@@ -43,7 +58,7 @@ struct CardView: View {
                                     }
                                 } label: {}
                             } label:{
-                                Text("\(options[14]) Hours")
+                                Text(" \(options[selectedOption]) h")
                                     .font(.system(size: 30, weight: .medium, design: .default))
                                     .foregroundColor(.black)
                                     .fixedSize(horizontal: true, vertical: false)
@@ -53,22 +68,25 @@ struct CardView: View {
                                 .frame(width: 9, height:11)
                                 .foregroundColor(.gray)
                         }
+                        .padding()
                     }
+                    Spacer()
                     Divider()
                         .frame(height: 60)
                         .background(Color.black)
-                    ProgressCircleView(progress: 0.6)
+                    Spacer()
+                    ProgressCircleView(progress: getProgress(current: times, goal: options[selectedOption]))
+                        .frame(width: 150, height: 180)
                 }
                 .padding()
 
             }
-        }
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     
     static var previews: some View {
-        CardView(options: [ 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340])
+        CardView(times : 12345, options: [ 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340])
     }
 }
