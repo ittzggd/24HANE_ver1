@@ -26,6 +26,7 @@ func getProgress(current: Int64, goal: Int) -> Double {
 
 struct CardView: View {
     @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var hane: Hane = Hane(todayAcc: 0, dailyAcc: 0, monthAcc: 0)
     
     var times: Int64
     var options: Array<Int>
@@ -42,7 +43,7 @@ struct CardView: View {
                             .font(.system(size: 17, weight: .regular, design: .rounded))
                             .foregroundColor(.black)
                             .padding(.top, 3)
-                        Text("\(timeToString(time: times))")
+                        Text("\(timeToString(time: hane.todayAcc))")
                             .font(.system(size: 30, weight: .medium, design: .default))
                             .fixedSize(horizontal: true, vertical: false)
                             .padding()
