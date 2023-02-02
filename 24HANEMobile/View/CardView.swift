@@ -28,7 +28,7 @@ struct CardView: View {
                             .font(.system(size: 17, weight: .regular, design: .rounded))
                             .foregroundColor(.black)
                             .padding(2)
-                        Text("240 H 20 M   ")
+                        Text("2 H 20 M   ")
                             .font(.system(size: 30, weight: .medium, design: .default))
                             .fixedSize(horizontal: true, vertical: false)
                             .padding(.bottom)
@@ -43,7 +43,7 @@ struct CardView: View {
                                     }
                                 } label: {}
                             } label:{
-                                Text("\(options[0]) Hours")
+                                Text("\(options[14]) Hours")
                                     .font(.system(size: 30, weight: .medium, design: .default))
                                     .foregroundColor(.black)
                                     .fixedSize(horizontal: true, vertical: false)
