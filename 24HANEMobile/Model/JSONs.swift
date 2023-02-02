@@ -21,7 +21,6 @@ struct mainInfo: Codable{
         self.inoutState = inoutState
         self.tagAt = tagAt
     }
-    static let sample = mainInfo.init(login: "", profileImage: "", isAdmin: false, inoutState: "", tagAt: "")
 }
 
 struct perMonth: Codable {
@@ -34,7 +33,6 @@ struct perMonth: Codable {
         self.profileImage = profileImage
         self.inOutLogs = inOutLogs
     }
-    static let sample = perMonth.init(login: "", profileImage: "", inOutLogs: [])
 }
 
 struct inOutStamp: Codable{
@@ -47,5 +45,4 @@ struct inOutStamp: Codable{
         self.outTimeStamp = outTimeStamp
         self.durationSecond = durationSecond
     }
-    static let sample = inOutStamp.init(inTimeStamp: -1, outTimeStamp: -1, durationSecond: -1)
 }
