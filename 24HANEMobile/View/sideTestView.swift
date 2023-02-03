@@ -9,47 +9,53 @@ import SwiftUI
 
 extension AnyTransition {
     static var moveAndFade: AnyTransition {
-        .asymmetric(insertion: .move(edge: .leading).combined(with: .opacity),
+        .asymmetric(insertion: .move(edge: .top).combined(with: .opacity),
                     removal: .move(edge: .trailing).combined(with: .opacity))
     }
 }
 
 struct sideTestView: View {
+    @State var isSideBarVisible: Bool
     
-    @State var showMenu = true
+    var sideBarWidth  = UIScreen.main.bounds.size.width * 0.6
+    var bgColor: Color =
+          Color(.init(
+                  red: 52 / 255,
+                  green: 70 / 255,
+                  blue: 182 / 255,
+                  alpha: 1))
     
     var body: some View {
-        let drag = DragGesture()
-            .onEnded {
-                if $0.translation.width > 100 {
-                    withAnimation{
-                        showMenu.toggle()
-                    }
-                }
+        ZStack{
+            GeometryReader { _ in
+                EmptyView()
             }
-        VStack{
-            Button {
-                withAnimation {
-                    showMenu.toggle()
-                }
-            } label: {
-                Label("test", systemImage: "popcorn")
+            .background(.black.opacity(0.6))
+            .opacity(isSideBarVisible ? 1 : 0)
+            .animation(.easeInOut.delay(0.2), value: isSideBarVisible)
+            .onTapGesture {
+                isSideBarVisible.toggle()
             }
-            ZStack{
-                if self.showMenu {
-                    sideView(intraID: "hejang") {
-                        self.showMenu.toggle()
-                    }
-                    .transition(.moveAndFade)
-                } 
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            content
+        }
+        .edgesIgnoringSafeArea(.all)
+    }
+    
+    var content: some View {
+        HStack(alignment: .top){
+            Spacer()
+            ZStack(alignment: .top) {
+                bgColor
             }
+            .frame(width: sideBarWidth)
+            .offset(x: isSideBarVisible ? 0 : sideBarWidth)
+            .animation(.default, value: isSideBarVisible)
         }
     }
 }
 
 struct sideTestView_Previews: PreviewProvider {
     static var previews: some View {
-        sideTestView()
+        sideTestView(isSideBarVisible: true)
     }
 }

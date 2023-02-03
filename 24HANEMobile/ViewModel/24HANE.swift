@@ -19,11 +19,11 @@ class Hane: ObservableObject {
     @Published var monthAcc: Int64
     @Published var logs: [dailyLog]?
     @Published var isLogin: Bool
+    @Published var calendar: [[dailyLog]]
     
     var userInfo: mainInfo?
     var monthLogs: perMonth?
     
-    var calendar: [[inOutStamp]?]
     
     init(todayAcc: Int64, dailyAcc: Int64, monthAcc: Int64) {
         self.todayAcc = todayAcc
@@ -33,5 +33,14 @@ class Hane: ObservableObject {
         self.calendar = []
     }
     
-    //userInfo?.callAPI()
+    func APIHandler(){
+        
+    }
+    func Formatting(){
+        
+    }
+    func LoadData(){
+        
+    }
+    
 }

@@ -10,26 +10,39 @@ import SwiftUI
 
 struct sideView: View {
     
+    @State var isSideBarOn: Bool
+    var sideBarWidth  = UIScreen.main.bounds.size.width * 0.6
+    
     var intraID: String
-    let menuToggle: () -> Void
-   
+  //  let menuToggle: () -> Void
+    
     var body: some View {
         ZStack{
             GeometryReader { _ in
                 EmptyView()
             }
-            .background(Color.gray.opacity(0.7))
-            .opacity(0.5)
+            .background(.black.opacity(0.6))
+            .opacity(isSideBarOn ? 1 : 0)
+            .animation(.easeInOut.delay(0.2), value: isSideBarOn)
             .onTapGesture {
-                self.menuToggle()
+                isSideBarOn.toggle()
             }
-            GeometryReader{ geo in
+            content
+        }
+        .edgesIgnoringSafeArea(.all)
+    }
+   
+    var content: some View {
+        HStack(alignment: .top){
+            Spacer()
+            ZStack(alignment: .top){
+                Color.white
                 VStack(alignment: .leading){
-                    HStack{
-                        Image(systemName: "pawprint.circle")
+                    HStack {
+                        Image("42Logo")
                             .resizable()
-                            .frame(width: 50, height: 50)
-                        Text(intraID)
+                            .frame(width: 40, height: 50)
+                        Text(" \(intraID)")
                             .font(.system(size: 25, weight: .medium, design: .default))
                             .foregroundColor(.black)
                             .font(.headline)
@@ -49,19 +62,16 @@ struct sideView: View {
                         .padding(.bottom, 30)
                 }
                 .padding()
-                .frame(width: geo.size.width / 1.2)
-                .background(.white)
-                .edgesIgnoringSafeArea(.all)
-                .position(x: geo.size.width * 0.85, y: geo.size.height / 2)
             }
+            .frame(width: sideBarWidth)
+            .offset(x: isSideBarOn ? 0 : sideBarWidth)
+            .animation(.default, value: isSideBarOn)
         }
     }
 }
 
 struct sideView_Previews: PreviewProvider {
     static var previews: some View {
-        sideView(intraID: "hejang"){
-            print("sidemenu toggle")
-        }
+        sideView(isSideBarOn: true, intraID: "hejang")
     }
 }
