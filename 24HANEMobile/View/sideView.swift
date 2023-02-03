@@ -24,7 +24,7 @@ var items: [buttonItem] = [
 
 struct sideView: View {
     
-    @State var isSideBarOn: Bool
+    @Binding var isSideBarOn: Bool
     var sideBarWidth  = UIScreen.main.bounds.size.width * 0.6
     
     var intraID: String
@@ -80,6 +80,6 @@ struct sideView: View {
 
 struct sideView_Previews: PreviewProvider {
     static var previews: some View {
-        sideView(isSideBarOn: true, intraID: "hejang")
+        sideView(isSideBarOn: .constant(true), intraID: "hejang")
     }
 }

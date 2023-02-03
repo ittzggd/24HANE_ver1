@@ -46,3 +46,15 @@ struct inOutStamp: Codable{
         self.durationSecond = durationSecond
     }
 }
+
+
+struct accumationTimes: Codable {
+    let todayAccumationTime: Int64
+    let monthAccumationTime: Int64
+    
+    init(todayAccumationTime: Int64, monthAccumationTime: Int64){
+        self.todayAccumationTime = todayAccumationTime
+        self.monthAccumationTime = monthAccumationTime
+    }
+    static let sample = accumationTimes.init(todayAccumationTime: -1, monthAccumationTime: -1)
+}

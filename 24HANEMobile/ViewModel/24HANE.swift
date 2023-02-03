@@ -20,7 +20,9 @@ class Hane: ObservableObject {
     @Published var logs: [dailyLog]?
     @Published var isLogin: Bool
     @Published var calendar: [[dailyLog]]
+    @Published var date = Date()
     
+    var accTime: accumationTimes?
     var userInfo: mainInfo?
     var monthLogs: perMonth?
     
@@ -33,14 +35,50 @@ class Hane: ObservableObject {
         self.calendar = []
     }
     
-    func APIHandler(){
+    @MainActor
+    func APIHandler() async throws {
+        var components = URLComponents(string: "https://api.24hoursarenotenough.42seoul.kr/v1/tag-log/permonth")!
+        let year = URLQueryItem(name: "year", value: "\(2023)") // date.year
+        let month = URLQueryItem(name: "month", value: "\(2)") //date.month
+        components.queryItems = [year, month]
+        
+        userInfo =  try await getJsonAsync("https://api.24hoursarenotenough.42seoul.kr/v1/tag-log/maininfo", type: mainInfo.self)
+        accTime = try await getJsonAsync("https://api.24hoursarenotenough.42seoul.kr/v1/tag-log/accumulationTimes", type: accumationTimes.self)
+        monthLogs = try await getJsonAsync(components.url!.absoluteString, type: perMonth.self)
         
     }
+    
     func Formatting(){
         
     }
+    
+    @MainActor
     func LoadData(){
         
     }
     
+    
+    private func getJsonAsync<T>(_ url: String, type: T.Type) async throws -> T where T : Decodable {
+        guard let url = URL(string: url) else {
+            fatalError("MissingURL")
+        }
+        guard let token = UserDefaults.standard.string(forKey: "Token") else {
+            fatalError("UnValid Token")
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = [
+            "Authorization" : "Bearer \(String(describing: token) )"
+        ]
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            fatalError("Access Denied")
+            /*
+              [FixMe] => Back to signIn Logic
+             */
+        }
+        let decodedData =  try JSONDecoder().decode(type.self, from: data)
+        return decodedData
+    }
 }
