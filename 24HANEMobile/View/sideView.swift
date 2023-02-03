@@ -14,7 +14,7 @@ struct buttonItem: Identifiable{
     var title: String
 }
 
-var userActions: [buttonItem] = [
+var items: [buttonItem] = [
     buttonItem(id: 3001, url: "https://material-havarti-67f.notion.site/57465de14326429294859ba4a60d9c22", image: Image("notionLogo"), title: "사용가이드"),
     buttonItem(id: 3002, url: "https://spot-tomato-468.notion.site/2022-42-SEOUL-bf0513c7197f4f71b4be968b8a2cd75a", image: Image("42Logo"), title: "지원금 지침 안내"),
     buttonItem(id: 3003, url: "https://docs.google.com/forms/d/1Lqs2cOwPdPa-9crMjhATesKpslDLC5XqJ92by_Qk-Qc/edit", image: Image(systemName: "questionmark.circle"), title: "앱 문의사항"),
@@ -62,7 +62,7 @@ struct sideView: View {
                         Spacer()
                     }
                     .padding(.top, 100)
-                    ForEach(userActions) { item in
+                    ForEach(items) { item in
                         URLButtonView(url: item.url, Image: item.image, title: item.title)
                     }
                     Spacer()
