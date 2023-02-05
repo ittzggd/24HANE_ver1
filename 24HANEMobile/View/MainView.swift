@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    
+    @EnvironmentObject var hane: Hane
     @Environment(\.colorScheme) var colorScheme
     @State var isSideBarOn: Bool
     
@@ -16,8 +16,15 @@ struct MainView: View {
         ZStack{
             VStack(){
                 HeaderView(isSideBarOn: $isSideBarOn)
-                SummaryView()
-                    .padding()
+                Divider()
+                TabView{
+                        SummaryView()
+                            .padding()
+                        DetailView()
+                    
+                }
+                .tabViewStyle(.page)
+                .indexViewStyle(.page(backgroundDisplayMode: .always))
             }
             sideView(isSideBarOn: $isSideBarOn, intraID: "hejang")
         }

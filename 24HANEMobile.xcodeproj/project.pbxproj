@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E350815298FA2110017EE5B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E350814298FA2110017EE5B /* CalendarView.swift */; };
 		0E68D215298B84BB0073326F /* JSONs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68D214298B84BB0073326F /* JSONs.swift */; };
 		0E68D21A298B85EA0073326F /* 24HANE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68D219298B85EA0073326F /* 24HANE.swift */; };
 		0E68D21C298BAFFF0073326F /* sideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68D21B298BAFFF0073326F /* sideView.swift */; };
@@ -15,8 +16,8 @@
 		0E940207298CD2400085F9ED /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E940206298CD2400085F9ED /* DateExtension.swift */; };
 		0E940209298CE5AA0085F9ED /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E940208298CE5AA0085F9ED /* SummaryView.swift */; };
 		0E94020B298CE6740085F9ED /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94020A298CE6740085F9ED /* MainView.swift */; };
+		0E94020D298D022F0085F9ED /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94020C298D022F0085F9ED /* DetailView.swift */; };
 		0EED0C00298B1A2300BBDE23 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED0BFF298B1A2300BBDE23 /* ColorExtension.swift */; };
-		0EED0C02298B419F00BBDE23 /* PickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED0C01298B419F00BBDE23 /* PickerExtension.swift */; };
 		0EEE04C02935FA4A00BAF824 /* _4HANEMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE04BF2935FA4A00BAF824 /* _4HANEMobileApp.swift */; };
 		0EEE04C22935FA4A00BAF824 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE04C12935FA4A00BAF824 /* ContentView.swift */; };
 		0EEE04C72935FA4D00BAF824 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE04C62935FA4D00BAF824 /* Preview Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E350814298FA2110017EE5B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		0E68D214298B84BB0073326F /* JSONs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONs.swift; sourceTree = "<group>"; };
 		0E68D219298B85EA0073326F /* 24HANE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 24HANE.swift; sourceTree = "<group>"; };
 		0E68D21B298BAFFF0073326F /* sideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideView.swift; sourceTree = "<group>"; };
@@ -47,9 +49,9 @@
 		0E940206298CD2400085F9ED /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		0E940208298CE5AA0085F9ED /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		0E94020A298CE6740085F9ED /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0E94020C298D022F0085F9ED /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0EE69ECF293C8DFD00189663 /* -4HANEMobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-4HANEMobile-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0EED0BFF298B1A2300BBDE23 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		0EED0C01298B419F00BBDE23 /* PickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerExtension.swift; sourceTree = "<group>"; };
 		0EEE04BC2935FA4A00BAF824 /* 24HANEMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24HANEMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EEE04BF2935FA4A00BAF824 /* _4HANEMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4HANEMobileApp.swift; sourceTree = "<group>"; };
 		0EEE04C12935FA4A00BAF824 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E350810298F96380017EE5B /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				0E940208298CE5AA0085F9ED /* SummaryView.swift */,
+				0EF8E481298A4973004A51F7 /* CardView.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		0E350811298F96400017EE5B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0E94020C298D022F0085F9ED /* DetailView.swift */,
+				0E350814298FA2110017EE5B /* CalendarView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		0E68D218298B85D90073326F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,12 +140,11 @@
 		0EF8E47E298A4941004A51F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0EF8E481298A4973004A51F7 /* CardView.swift */,
-				0E940208298CE5AA0085F9ED /* SummaryView.swift */,
+				0E350811298F96400017EE5B /* Detail */,
+				0E350810298F96380017EE5B /* Summary */,
 				0E94020A298CE6740085F9ED /* MainView.swift */,
 				0E68D21B298BAFFF0073326F /* sideView.swift */,
 				0E68D21D298BB24A0073326F /* URLButtonView.swift */,
-				0EED0C01298B419F00BBDE23 /* PickerExtension.swift */,
 				0EED0BFF298B1A2300BBDE23 /* ColorExtension.swift */,
 				0E68D21F298BB8D30073326F /* Asset.xcassets */,
 				0EF8E485298A4997004A51F7 /* ProgressCircleView.swift */,
@@ -218,14 +237,15 @@
 				0E68D21E298BB24A0073326F /* URLButtonView.swift in Sources */,
 				0E940207298CD2400085F9ED /* DateExtension.swift in Sources */,
 				0EEE04C22935FA4A00BAF824 /* ContentView.swift in Sources */,
+				0E350815298FA2110017EE5B /* CalendarView.swift in Sources */,
 				0E68D21A298B85EA0073326F /* 24HANE.swift in Sources */,
 				0E68D21C298BAFFF0073326F /* sideView.swift in Sources */,
 				0EF8E486298A4997004A51F7 /* ProgressCircleView.swift in Sources */,
 				0EF8E482298A4973004A51F7 /* CardView.swift in Sources */,
-				0EED0C02298B419F00BBDE23 /* PickerExtension.swift in Sources */,
 				9AF0DC30298CBF2300ADDD61 /* HeaderView.swift in Sources */,
 				0E68D215298B84BB0073326F /* JSONs.swift in Sources */,
 				0EEE04C02935FA4A00BAF824 /* _4HANEMobileApp.swift in Sources */,
+				0E94020D298D022F0085F9ED /* DetailView.swift in Sources */,
 				0EED0C00298B1A2300BBDE23 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
