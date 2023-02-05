@@ -38,8 +38,8 @@ class Hane: ObservableObject {
     @MainActor
     func APIHandler() async throws {
         var components = URLComponents(string: "https://api.24hoursarenotenough.42seoul.kr/v1/tag-log/permonth")!
-        let year = URLQueryItem(name: "year", value: "\(2023)") // date.year
-        let month = URLQueryItem(name: "month", value: "\(2)") //date.month
+        let year = URLQueryItem(name: "year", value: "\(date.year)") // date.year
+        let month = URLQueryItem(name: "month", value: "\(date.month)") //date.month
         components.queryItems = [year, month]
         
         userInfo =  try await getJsonAsync("https://api.24hoursarenotenough.42seoul.kr/v1/tag-log/maininfo", type: mainInfo.self)
@@ -49,6 +49,8 @@ class Hane: ObservableObject {
     }
     
     func Formatting(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-M-d"
         
     }
     
