@@ -27,10 +27,10 @@ class Hane: ObservableObject {
     var monthLogs: perMonth?
     
     
-    init(todayAcc: Int64, dailyAcc: Int64, monthAcc: Int64) {
-        self.todayAcc = todayAcc
-        self.dailyAcc = dailyAcc
-        self.monthAcc = monthAcc
+    init() {
+        self.todayAcc = 0
+        self.dailyAcc = 0
+        self.monthAcc = 0
         self.isLogin = false
         self.calendar = []
     }

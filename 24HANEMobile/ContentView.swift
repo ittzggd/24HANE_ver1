@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     var body: some View {
-       MainView(isSideBarOn: true)
+       MainView(isSideBarOn: false)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Hane())
     }
 }
