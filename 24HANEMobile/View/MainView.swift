@@ -20,6 +20,7 @@ struct MainView: View {
                 TabView{
                         SummaryView()
                             .padding()
+                            .environmentObject(hane)
                         DetailView()
                     
                 }
@@ -34,5 +35,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView(isSideBarOn: false)
+            .environmentObject(Hane())
     }
 }

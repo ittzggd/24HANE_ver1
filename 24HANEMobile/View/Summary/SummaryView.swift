@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SummaryView: View {
+    @EnvironmentObject var hane: Hane
+    
     var body: some View {
         GeometryReader { geo in
             VStack(spacing: 30){
@@ -18,7 +20,7 @@ struct SummaryView: View {
                         .padding(.bottom, 5)
                     Spacer()
                 }
-                CardView(times: 23456, options: [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18])
+                CardView(times: hane.dailyAcc, options: [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18])
                     .padding()
                     .frame(width: geo.size.width, height: geo.size.height / 3.5 )
                 HStack{
@@ -40,5 +42,6 @@ struct SummaryView: View {
 struct SummaryView_Previews: PreviewProvider {
     static var previews: some View {
         SummaryView()
+            .environmentObject(Hane())
     }
 }

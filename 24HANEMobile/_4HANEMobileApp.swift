@@ -10,9 +10,11 @@ import SwiftUI
 
 @main
 struct _4HANEMobileApp: App {
+    var hane: Hane = Hane()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(hane)
         }
     }
 }
