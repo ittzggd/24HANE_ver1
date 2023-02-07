@@ -21,7 +21,7 @@ struct MainView: View {
                         SummaryView()
                             .padding()
                             .environmentObject(hane)
-                        DetailView()
+                        DetailView(selectedDay: Date())
                     
                 }
                 .tabViewStyle(.page)
