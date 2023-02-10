@@ -62,8 +62,9 @@ struct ContentView: View {
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView(isSignedIn: true, isSigned: IsSignedIn())
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(isSignedIn: IsSignedIn(), loading: false)
+            .environmentObject(APIHandler())
+    }
+}

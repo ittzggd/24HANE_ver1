@@ -44,5 +44,6 @@ struct CircularProgressbarView: View {
 struct CircularProgressbarView_Previews: PreviewProvider {
     static var previews: some View {
         CircularProgressbarView(progress: 0.72)
+            .environmentObject(APIHandler())
     }
 }

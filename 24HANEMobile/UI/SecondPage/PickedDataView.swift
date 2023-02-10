@@ -33,6 +33,6 @@ struct PickedDataView: View {
 
 struct PickedDataView_Previews: PreviewProvider {
     static var previews: some View {
-        PickedDataView(dailyHours: "", monthlyHours: "", selectedDate: 10)
+        PickedDataView(dailyHours: "7 : 00", monthlyHours: "8 : 00", selectedDate: 10)
     }
 }

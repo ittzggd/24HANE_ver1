@@ -48,5 +48,6 @@ struct SummaryView: View {
 struct Summary_Previews: PreviewProvider {
     static var previews: some View {
         SummaryView()
+            .environmentObject(APIHandler())
     }
 }

@@ -75,5 +75,6 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(options: [20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240], type: "month", currentTime: APIHandler().accTime.monthAccumationTime)
+            .environmentObject(APIHandler())
     }
 }
