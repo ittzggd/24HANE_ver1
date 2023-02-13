@@ -36,9 +36,9 @@ struct DetailView: View {
                     .foregroundColor(Color.calendarDate)
             }
             .padding(.top, 10)
-            CalendarView(logTimeColor: calculateLogColor(timeLogs: groupedLogs, year: today.year, month: today.month)){ day in
-                selectedDay = day
-            }
+//            CalendarView(logTimeColor: calculateLogColor(timeLogs: groupedLogs, year: today.year, month: today.month)){ day in
+//                selectedDay = day
+//            }
             PickedDataView(
                 dailyHours: getDailyAccumulationTime(
                     monthLogs: groupedLogs,

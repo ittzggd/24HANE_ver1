@@ -29,8 +29,8 @@ struct ContentView: View {
             } else {
                 GeometryReader{ geometry in
                     ZStack(alignment: .trailing){
-                        MainView(isSigned: isSignedIn, showMenu: $showMenu)
-                            .frame(width: geometry.size.width, height: geometry.size.height)
+//                        MainView(isSigned: isSignedIn, showMenu: $showMenu)
+//                            .frame(width: geometry.size.width, height: geometry.size.height)
                         if self.showMenu {
                             SideMenuView(isSigned: isSignedIn, intraID: apiHandler.userInfo.login) {
                                 self.showMenu.toggle()

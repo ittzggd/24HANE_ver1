@@ -17,12 +17,13 @@ struct _4HANEMobileApp: App {
     var apiHandler = APIHandler()
     var body: some Scene {
         WindowGroup {
-            ContentView(isSignedIn: IsSignedIn())
-                .environmentObject(isSigned)
-                .environmentObject(apiHandler)
-                .onAppear{
-                    print("hi")
-                }
+            MainView()
+//            ContentView(isSignedIn: IsSignedIn())
+//                .environmentObject(isSigned)
+//                .environmentObject(apiHandler)
+//                .onAppear{
+//                    print("hi")
+//                }
         }
     }
 }
